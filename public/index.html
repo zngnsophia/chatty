@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Вход — мини-мессенджер</title>
+<link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <div class="auth-shell">
+    <div class="wordmark"><span class="dot"></span>тихий чат</div>
+
+    <div class="auth-card">
+      <div class="tabs">
+        <button class="tab active" data-tab="login" type="button">Вход</button>
+        <button class="tab" data-tab="register" type="button">Регистрация</button>
+      </div>
+
+      <div class="form-error" id="formError"></div>
+
+      <form class="form active" id="loginForm">
+        <div class="field">
+          <label for="loginUsername">Логин</label>
+          <input id="loginUsername" name="username" autocomplete="username" required />
+        </div>
+        <div class="field">
+          <label for="loginPassword">Пароль</label>
+          <input id="loginPassword" name="password" type="password" autocomplete="current-password" required />
+        </div>
+        <button class="btn-primary" type="submit">Войти</button>
+      </form>
+
+      <form class="form" id="registerForm">
+        <div class="field">
+          <label for="registerUsername">Логин</label>
+          <input id="registerUsername" name="username" autocomplete="username" required />
+          <div class="hint">3–20 символов: латиница, цифры, подчёркивание</div>
+        </div>
+        <div class="field">
+          <label for="registerPassword">Пароль</label>
+          <input id="registerPassword" name="password" type="password" autocomplete="new-password" required />
+          <div class="hint">Минимум 6 символов</div>
+        </div>
+        <button class="btn-primary" type="submit">Создать аккаунт</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="/js/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Чат — мини-мессенджер</title>
+<link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <div class="chat-shell">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="wordmark"><span class="dot"></span>тихий чат</div>
+        <div class="me">Вы: <span class="name" id="meName">…</span></div>
+      </div>
+
+      <div class="section-label">Сейчас на связи</div>
+      <ul class="online-list" id="onlineList"></ul>
+
+      <button class="btn-logout" id="logoutBtn" type="button">Выйти</button>
+    </aside>
+
+    <main class="chat-main">
+      <div class="chat-header">
+        <h1>Общий чат</h1>
+        <div class="status" id="status"><span class="dot"></span><span id="statusText">подключение…</span></div>
+      </div>
+
+      <div class="message-list" id="messageList">
+        <div class="empty-state" id="emptyState">Здесь пока пусто. Напишите первое сообщение — его увидят все, кто сейчас в чате.</div>
+      </div>
+
+      <form class="composer" id="composer">
+        <textarea id="messageInput" rows="1" placeholder="Написать сообщение…" required></textarea>
+        <button class="btn-send" id="sendBtn" type="submit">Отправить</button>
+      </form>
+    </main>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/chat.js"></script>
+</body>
+</html>
